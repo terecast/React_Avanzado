@@ -1,21 +1,19 @@
 import './App.css'
-import Home from './pages/Home'
-import Dashboard from './pages/Dashboard'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import Secret from './pages/Secret'
+
 import Header from '@/components/Header/Header'
+import { BrowserRouter } from 'react-router-dom'
+import RoutesIndex from './routes'
+import { AdminProvider } from './context/AdminContext'
 
 function App () {
   return (
-    <>
-      <Header />
-      <Home />
-      <Dashboard />
-      <Login />
-      <Signup />
-      <Secret />
-    </>
+    <AdminProvider>
+      <BrowserRouter>
+        <Header />
+        <RoutesIndex />
+      </BrowserRouter>
+
+    </AdminProvider>
   )
 }
 
