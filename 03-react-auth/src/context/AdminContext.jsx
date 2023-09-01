@@ -24,6 +24,7 @@ const AdminProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('jwt_token')
     setIsAdmin(false)
+    setIsLoggedIn(false)
   }
 
   return (

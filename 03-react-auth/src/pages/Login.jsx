@@ -20,7 +20,6 @@ const Login = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-
       }
 
       const response = await fetch('https://ecommerce-json-jwt.onrender.com/login', settings)
